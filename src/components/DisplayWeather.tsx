@@ -69,7 +69,8 @@ const DisplayWeather = () => {
       console.log("NO Data Found❌");
       toast.error("No Data Found", {
         duration: 2000,
-        position: 'top-center'})
+        position: "top-center",
+      });
     }
   };
 
@@ -80,27 +81,33 @@ const DisplayWeather = () => {
     switch (weather) {
       case "Rain":
         iconElement = <FaCloudRain />;
-        iconColor = "lightblue";
+        iconColor = "#1E90FF";
         break;
 
       case "Clear":
         iconElement = <IoMdSunny />;
-        iconColor = "orange";
+        iconColor = "#D2691E";
         break;
 
       case "Clouds":
-        iconElement = <IoIosCloudy />;
-        iconColor = "";
+        iconElement = (
+          <IoIosCloudy style={{ filter: "drop-shadow(0 0 2px black)" }} />
+        );
+        iconColor = "#FFF5EE";
         break;
 
       case "Mist":
-        iconElement = <BsFillCloudFogFill />;
-        iconColor = "orange";
+        iconElement = (
+          <BsFillCloudFogFill
+            style={{ filter: "drop-shadow(0 0 2px black)" }}
+          />
+        );
+        iconColor = "#B0E0E6";
         break;
 
       default:
         iconElement = <TiWeatherPartlySunny />;
-        iconColor = "orange";
+        iconColor = "#D2691E";
     }
 
     return (
@@ -153,7 +160,7 @@ const DisplayWeather = () => {
             </div>
 
             <div className="bottomInfoArea">
-              <WiHumidity className="windIcon" style={{ color: "blue" }} />
+              <WiHumidity className="windIcon" style={{ color: "#7B68EE" }} />
               <div className="humidityLevel">
                 <div className="humidInfo">
                   <h1>{weatherData.main.humidity}%</h1>
@@ -162,7 +169,10 @@ const DisplayWeather = () => {
               </div>
 
               <div className="wind">
-                <MdWindPower className="windIcon" />
+                <MdWindPower
+                  className="windIcon"
+                  style={{ color: "#A0522D" }}
+                />
                 <div className="humidInfo">
                   <h1>{weatherData.wind.speed} km/h</h1>
                   <p>Wind Speed</p>
