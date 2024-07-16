@@ -7,12 +7,13 @@ export const MainWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
+
   .container {
     background-color: #ffffff7d;
     max-height: 95vh;
     border-radius: 12px;
     padding: 1.5rem;
-    // position: relative;  
+    position: relative;  
     box-shadow: 0 10px 15px rgb(0 0 0 / 20%);
     box-sizing: border-box;
     color: rgba(0, 0, 0, 0.8);
@@ -67,12 +68,12 @@ export const MainWrapper = styled.div`
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-family: "Bebas Neue", sans-serif;
     }
 
     span {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       font-family: "Inter", sans-serif;
     }
 
